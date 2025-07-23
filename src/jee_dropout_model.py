@@ -12,7 +12,7 @@ from sklearn.metrics import classification_report
 import joblib
 
 
-jee_final = pd.read_csv("Data/final/JEE_Dropout_Final.csv", delimiter=',')
+jee_final = pd.read_csv("Data/03_final/JEE_Dropout_Final.csv", delimiter=',')
 
 X = jee_final.drop(["dropout"], axis=1)
 Y = jee_final["dropout"]
@@ -35,16 +35,6 @@ pipeline_B = Pipeline([
 
 pipeline_A.fit(X_train, y_train)
 pipeline_B.fit(X_train_n, y_train_n)
-
-
-
-print("Evaluation for Model A")
-y1_pred = pipeline_A.predict(X_test)
-print(classification_report(y_test, y1_pred))
-
-print("Evaluation for Model B")
-y2_pred = pipeline_B.predict(X_test_n)
-print(classification_report(y_test_n, y2_pred))
 
 print("Saving models....")
 joblib.dump(pipeline_A, "Model A.pkl")
