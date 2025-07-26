@@ -4,11 +4,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, f1_score
 from sklearn.model_selection import cross_val_score, StratifiedKFold
 
-model1 = joblib.load("models/Model A.pkl")
-model2 = joblib.load("models/Model_B.pkl")
-jee = pd.read_csv("Data/03_final/JEE_Dropout_Final.csv", delimiter=',')
+model1 = joblib.load("05_models/Model AA.pkl")
+model2 = joblib.load("05_models/Model_BB.pkl")
 
-X = jee.sample(frac=0.4, random_state=50).drop("dropout", axis=1)
+jee = pd.read_csv("01_Data/03_final/JEE_Dropout_Final.csv", delimiter=',')
+
+X = jee.sample(frac=0.4, random_state=50).drop(["dropout","admission_taken"], axis=1)
 y = jee.sample(frac=0.4, random_state=50)["dropout"]
 X_n = jee.sample(frac=0.4, random_state=50).drop(["dropout","Income vs Admission","PSxIA","admission_taken"], axis=1)
 

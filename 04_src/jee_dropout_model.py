@@ -12,9 +12,9 @@ from sklearn.metrics import classification_report
 import joblib
 
 
-jee_final = pd.read_csv("Data/03_final/JEE_Dropout_Final.csv", delimiter=',')
+jee_final = pd.read_csv("01_Data/03_final/JEE_Dropout_Final.csv", delimiter=',')
 
-X = jee_final.drop(["dropout"], axis=1)
+X = jee_final.drop(["dropout","admission_taken"], axis=1)
 Y = jee_final["dropout"]
 X_n = jee_final.drop(["dropout","Income vs Admission","PSxIA","admission_taken"], axis=1)
 Y_n = jee_final["dropout"]
