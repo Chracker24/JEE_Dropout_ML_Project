@@ -3,6 +3,7 @@ import joblib
 import time
 import pandas as pd
 import numpy as np
+
 st.set_page_config(
   layout="centered"
 )
@@ -25,11 +26,8 @@ school= st.selectbox("What board was your school affiliated to?", ["State","CBSE
 lf = lambda x : 0 if x == "State" else (1 if x == "CBSE" else 2)
 school_board = lf(school)
 class12 = st.number_input("What was your Class 12 percentage overall?")
-attempts = st.number_input("How many times have you attemped JEE/NEET?", min_value=0, max_value=10)
-coaching = st.selectbox("Are you enrolled in any coaching classes", ["Yes", "No"])
-if coaching == "Yes":
-  coaching_name = st.text_input("What is the name of your coaching institute?")
-cf = lambda x : 2 if coaching=="No" else (0 if x in [
+attempts = st.number_input("How many times have you attemped JEE/NEET?", min_value=0, max_value=6)
+cf = lambda x : 0 if x in [
     "Allen",
     "Aakash",
     "Aakash Byju's",
@@ -43,8 +41,13 @@ cf = lambda x : 2 if coaching=="No" else (0 if x in [
     "T.I.M.E.",
     "Xylem",
     "XYLEM"
-  ] else 1)
-coaching_institute = cf(coaching_name)
+  ] else 1
+coaching = st.selectbox("Are you enrolled in any coaching classes", ["Yes", "No"])
+if coaching == "Yes":
+  coaching_name = st.text_input("What is the name of your coaching institute?")
+  coaching_institute = cf(coaching_name)
+else:
+  coaching_institute= 2
 daily_study_hours = st.number_input("How many hours do you study daily?", min_value=0, max_value=24)
 income = st.slider("What is your family's monthly income?", max_value=1000000, step=10000)
 ff = lambda x : 0 if x < 80000 else(1 if x <250000 else 2)
