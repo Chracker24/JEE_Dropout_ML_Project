@@ -3,19 +3,23 @@ import joblib
 import time
 import pandas as pd
 import numpy as np
-
 st.set_page_config(
   layout="centered"
 )
 if "page" not in st.session_state:
   st.session_state.page = 0
 if "answers" not in st.session_state:
-  st.session_state.answers ={}
-  
+  st.session_state.answers = []
+if "name" not in st.session_state:
+  st.session_state.name = ""  
+if "prediction" not in st.session_state:
+  st.session_state.prediction = None
 boo=False
 st.title("Questionaire")
 st.caption("the models have been woken from deep slumber, and are ready to predict your future.")
 
+name = st.text_input("What is your name")
+st.session_state.name = name
 score = st.number_input("What was your JEE/NEET score?")
 school= st.selectbox("What board was your school affiliated to?", ["State","CBSE","ICSE"])
 lf = lambda x : 0 if x == "State" else (1 if x == "CBSE" else 2)
@@ -73,16 +77,18 @@ drained = drainf(drain)
 mental_health_issues = round((overwhelmed + concentration + drained)/3)
 parental_support = 0.30*daily_study_hours + 0.20*family_education + 0.05*coaching_institute
 peer_focused_mh = 2*peer_pressure_level + mental_health_issues 
-
 choice = st.checkbox("Ready to predict?")
 if choice:
   boo =True
-
   with st.spinner("Thanks for entering the data, Waking up the models (again...)"):
     model1 = joblib.load("../05_models/Model_JEET.pkl") 
     pred=model1.predict_proba(np.array([score,school_board,class12,attempts,coaching_institute,daily_study_hours,family_income,family_education,location_type,peer_pressure_level,mental_health_issues,peer_focused_mh,parental_support]).reshape(1,-1))
-    time.sleep(7)
+    st.session_state.prediction = pred[:,1]
+    st.session_state.answers = [score,school_board,class12,attempts,coaching_institute,daily_study_hours,family_income,family_education,location_type,peer_pressure_level,mental_health_issues,peer_focused_mh,parental_support]
+    st.write(st.session_state.answers)
+    time.sleep(3)
     if boo:
+      
       if pred[:,1] < 0.66 :
         if score!=0 or class12!=0:
           st.markdown("<p style='font-size:2vw; text-align:center'>The Model God has predicted that you will...</p>", unsafe_allow_html=True)
@@ -106,3 +112,4 @@ if choice:
           st.markdown("<p style='font-size:2vw; text-align:center'>The Model God has forsaken you. Dropout is imminent. May your side hustle prosper</p>", unsafe_allow_html=True)
           time.sleep(1)
           st.markdown(f"<p style='font-size:3vw; text-align:center'>You have a <b style='color:red'>{float(pred[:,1]*100):.2f}%</b> chance of dropping out</p>", unsafe_allow_html=True)
+st.write(st.session_state.answers)
