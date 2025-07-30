@@ -1,2 +1,2 @@
 *.docx
-.secrets.toml
+**/.streamlit/secrets.toml
