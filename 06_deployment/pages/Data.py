@@ -87,8 +87,6 @@ if choice:
     model1 = joblib.load("model/JEET.pkl") 
     pred=model1.predict_proba(np.array([score,school_board,class12,attempts,coaching_institute,daily_study_hours,family_income,family_education,location_type,peer_pressure_level,mental_health_issues,peer_focused_mh,parental_support]).reshape(1,-1))
     st.session_state.prediction = pred[:,1]
-    st.session_state.answers = [score,school_board,class12,attempts,coaching_institute,daily_study_hours,family_income,family_education,location_type,peer_pressure_level,mental_health_issues,peer_focused_mh,parental_support]
-    st.write(st.session_state.answers)
     time.sleep(3)
     if boo:
       
@@ -115,4 +113,5 @@ if choice:
           st.markdown("<p style='font-size:2vw; text-align:center'>The Model God has forsaken you. Dropout is imminent. May your side hustle prosper</p>", unsafe_allow_html=True)
           time.sleep(1)
           st.markdown(f"<p style='font-size:3vw; text-align:center'>You have a <b style='color:red'>{float(pred[:,1]*100):.2f}%</b> chance of dropping out</p>", unsafe_allow_html=True)
-st.write(st.session_state.answers)
+      st.session_state.answers = [score,school_board,class12,attempts,coaching_institute,daily_study_hours,family_income,family_education,location_type,peer_pressure_level,mental_health_issues,peer_focused_mh,parental_support]
+      st.success("JEET is ready to see you now. Access granted in your sidebar")
