@@ -84,7 +84,7 @@ choice = st.checkbox("Ready to predict?")
 if choice:
   boo =True
   with st.spinner("Thanks for entering the data, Waking up the models (again...)"):
-    model1 = joblib.load("../model/JEET.pkl") 
+    model1 = joblib.load("model/JEET.pkl") 
     pred=model1.predict_proba(np.array([score,school_board,class12,attempts,coaching_institute,daily_study_hours,family_income,family_education,location_type,peer_pressure_level,mental_health_issues,peer_focused_mh,parental_support]).reshape(1,-1))
     st.session_state.prediction = pred[:,1]
     time.sleep(3)
