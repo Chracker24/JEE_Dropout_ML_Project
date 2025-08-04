@@ -29,5 +29,5 @@ pipeline_B = Pipeline([
 pipeline_B.fit(X_train, y_train)
 
 print("Saving models....")
-joblib.dump(pipeline_B, "Model_JEET.pkl")
+joblib.dump(pipeline_B, "Model_JEET.pkl", compress=3)
 print("Models saved successfully")
