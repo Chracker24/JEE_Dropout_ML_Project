@@ -3,3 +3,4 @@ joblib
 pandas
 numpy
 google-generativeai
+imbalanced-learn
