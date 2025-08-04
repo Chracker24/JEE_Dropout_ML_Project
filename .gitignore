@@ -1,2 +1,2 @@
 *.docx
-**/.streamlit/secrets.toml
+06_deployment/.streamlit/secrets.toml
