@@ -1,6 +1,1 @@
 *.docx
-**/.streamlit/secrets.toml
-
-git rm --cached 06_deployment/.streamlit/secrets.toml
-git commit -m "Removed secrets.toml from tracking"
-git push
