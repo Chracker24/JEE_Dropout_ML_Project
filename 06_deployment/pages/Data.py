@@ -92,25 +92,25 @@ if choice:
       
       if pred[:,1] < 0.66 :
         if score!=0 or class12!=0:
-          st.markdown("<p style='font-size:2vw; text-align:center'>The Model God has predicted that you will...</p>", unsafe_allow_html=True)
+          st.markdown("<p style='font-size:2vw; text-align:center'>JEET has predicted that you will...</p>", unsafe_allow_html=True)
           time.sleep(3)
           st.markdown("<p style='font-size:4vw; text-align:center; color:green'><b>NOT DROPOUT</b></p>", unsafe_allow_html=True)
           time.sleep(1)
           st.markdown("<p style='font-size:1vw; text-align:center'>Dropout? You? Never. Now go submit that assignment you forgot",unsafe_allow_html=True)
         else:
-          st.markdown("<p style='font-size:2vw; text-align:center'>The Model God has predicted that you will...</p>", unsafe_allow_html=True) 
+          st.markdown("<p style='font-size:2vw; text-align:center'>JEET has predicted that you will...</p>", unsafe_allow_html=True) 
           time.sleep(3)
           st.markdown("<p style='font-size:4vw; text-align:center; color:red'><b>DROPOUT</b></p>", unsafe_allow_html=True)
           time.sleep(1)
-          st.markdown("<p style='font-size:2vw; text-align:center'>The Model God has forsaken you. Dropout is imminent. May your side hustle prosper</p>", unsafe_allow_html=True)
+          st.markdown("<p style='font-size:2vw; text-align:center'>The exams are planning to forsake you. Dropout is imminent. May your side hustle prosper</p>", unsafe_allow_html=True)
           time.sleep(1)
           st.markdown(f"<p style='font-size:3vw; text-align:center'>You have a <b style='color:red'>{float(pred[:,1]*100):.2f}%</b> chance of dropping out</p>", unsafe_allow_html=True)
       else:
-          st.markdown("<p style='font-size:2vw; text-align:center'>The Model God has predicted that you will...</p>", unsafe_allow_html=True) 
+          st.markdown("<p style='font-size:2vw; text-align:center'>The JEET has predicted that you will...</p>", unsafe_allow_html=True) 
           time.sleep(3)
           st.markdown("<p style='font-size:4vw; text-align:center; color:red'><b>DROPOUT</b></p>", unsafe_allow_html=True)
           time.sleep(1)
-          st.markdown("<p style='font-size:2vw; text-align:center'>The Model God has forsaken you. Dropout is imminent. May your side hustle prosper</p>", unsafe_allow_html=True)
+          st.markdown("<p style='font-size:2vw; text-align:center'>The JEET has forsaken you. Dropout is imminent. May your side hustle prosper</p>", unsafe_allow_html=True)
           time.sleep(1)
           st.markdown(f"<p style='font-size:3vw; text-align:center'>You have a <b style='color:red'>{float(pred[:,1]*100):.2f}%</b> chance of dropping out</p>", unsafe_allow_html=True)
       st.session_state.answers = [score,school_board,class12,attempts,coaching_institute,daily_study_hours,family_income,family_education,location_type,peer_pressure_level,mental_health_issues,peer_focused_mh,parental_support]
