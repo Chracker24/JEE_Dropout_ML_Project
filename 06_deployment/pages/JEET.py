@@ -66,7 +66,7 @@ model = genai.GenerativeModel('gemini-2.5-flash-lite',
         top_k=40
 ))
 
-st.markdown("<p style='text-align: center; font-size: 5vw'>JEET 🚀</p>",unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 5vw'><b>JEET 🚀</b></p>",unsafe_allow_html=True)
 constraint = ". Please answer within 1200 tokens. Do not mention this in your response. Keep the responses concise yet really informative and simple. Do not use excessie bullet points to convey answers"
 
 if "chat_history_for_model" not in st.session_state:
