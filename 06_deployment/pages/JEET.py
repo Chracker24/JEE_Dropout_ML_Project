@@ -18,7 +18,7 @@ Guidelines:
 - Mention to the student what all factors you think are determental to his ongoing studies from the student data that will be provided(~1900 tokens).
 - Do NOT mention tokens or model limitations.
 - Asking about daily study hours or study hours in general is last priority
-- Ask really straightforward questions that prompts the student's answer to be indicative of problems faced and do not keep focusing on one problem. This can be only done if that is the only problem present.
+- Ask really straightforward questions with explanation why
 - You only have 4 more messages to help the student.
 """
 student_details = f"""
