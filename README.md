@@ -111,9 +111,8 @@ streamlit run Home.py
 
 ## Contributors
 
-Christy Chovalloor - Software Engineering Student, Queen's University Belfast
-[Linkedin](https://www.linkedin.com/in/christy-chovalloor/)
-[Github](https://github.com/Chracker24)
+Christy Chovalloor - Software Engineering Student, Queen's University Belfast <br>
+[Linkedin](https://www.linkedin.com/in/christy-chovalloor/)      [Github](https://github.com/Chracker24)
 
 ## License
 MIT License
