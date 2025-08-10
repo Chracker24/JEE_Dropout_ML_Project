@@ -1,2 +1,3 @@
 *.docx
 06_deployment/.streamlit/secrets.toml
+Plan.md
