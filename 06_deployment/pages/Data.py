@@ -90,7 +90,7 @@ if choice:
     time.sleep(3)
     if boo:
       
-      if pred[:,1] < 0.66 :
+      if pred[:,1] < 0.5 :
         if score!=0 or class12!=0:
           st.markdown("<p style='font-size:2vw; text-align:center'>JEET has predicted that you will...</p>", unsafe_allow_html=True)
           time.sleep(3)
