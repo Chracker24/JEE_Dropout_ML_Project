@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name ="viewport" constant="width=device-width, initial-size=1.0">
+        <title>JEET's homeroom</title>
+        <link rel="stylesheet" href="CSS and JS/landing_page.css"
+    </head>
+    <body>
+        <nav class="nav">
+            <a class="home" href="#home">Home</a>
+            <button class="nav-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+                ☰
+            </button>
+            <ul class="nav-list">
+                <li><a href="#Link">Link to app</a></li>
+                <li><a href="#What">What</a></li>
+                <li><a href="#Why">Why</a></li>
+                <li><a href="#When">When</a></li>
+                <li><a href="#How">How</a></li>
+            </ul>
+        </nav>
+
+        <main id="home" class="main">
+            <div class="heading JEET">
+                <span class="JEET_heading">JEET</span><br> 
+                <span id="subline_jeet"></span></h1>
+            </div>
+        </main>
+        <section id="Link" class="section1">
+            <h2 class="Link_heading">Link to the app</h2>
+            <div class="Link_button_div">
+                <span class="Link_subline">Get Started </span>
+                <p class="Link_para">JEET is live! Try it today and find out if you are on the right path!</p>
+                <button class="JEET_button">Try JEET</button>
+            </div>    
+        </section>
+        <section id="What" class="section">
+            <h2 class="What_heading">
+                What is JEET?
+            </h2>
+            <p class="What_para">
+                JEET is an AI-powered web application that predicts the likelihood of students dropping out after Class 12, specifically those preparing for India’s JEE (Joint Entrance Examination) and NEET (National Entrance cum Eligibility Test).
+            </p>
+            <div class="cards">
+                <div class="ML-card">
+                    <h2 class="card-title">Data Preprocessing</h2>
+                    <div class="card-content">
+                        <p>Class imbalance with <b>SMOTE</b></p>
+                        <p>Normalization</p>
+                        <p>Feature Scaling</p>
+                    </div>
+                </div>
+                <div class="ML-card">
+                    <h2 class="card-title">Machine Learning Model used</h2>
+                    <div class="card-content">
+                        <p><b>Voting Classifier</b></p>
+                        <p>(Random Forest Classifier + SVC)</p>
+                    </div>
+                </div>
+                <div class="ML-card">
+                    <h2 class="card-title">Explainability</h2>
+                    <div class="card-content">
+                        <p><b>SHAP (SHapley Additive Explanations)</b> for feature importance</p>
+                    </div>
+                </div>
+                <div class="ML-card">
+                    <h2 class="card-title">Deployment and Integrations</h2>
+                    <div class="card-content">
+                        <p><b>Streamlit</b> Web App</p>
+                        <p> API integration</p>
+                        <p><b>Google Gemini</b> Integration</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Why" class="section">
+            <h2 class="Why_heading">
+                Why is JEET necessary?
+            </h2>
+            <p class="Why_para">JEET was designed to address some of the big problems that students give into without knowing: </p>
+            <div class="Why_boxes">
+                <div class="box" id="box1">
+                    <span class="box1_words">Students entering Engineering and Medical with no real interest in the fields.</span>
+                </div>
+                <div class="box" id="box1">
+                    <span class="box1_words">JEE and NEET being time-intensive exams which the students can invest in other fields where they can develop themselves better</span>
+                </div>
+                <div class="box" id="box3">
+                    <span class="box1_words">Absence of an early-warning system to identify struggling students before they face burnout or dropout.</span>
+                </div>
+            </div>
+            <p class="Why_para2">
+                These challenges highlight the urgent need for a tool that doesn’t just react after failure but actively guides students early on. JEET steps in as that safety net, giving clarity before years of effort are lost.
+            </p>
+        </section>
+        <section id="When" class="section">
+            <h2 class="When_heading">When should you use JEET?</h2>
+            <p class="When_para">
+                JEET is most effective when used <b>early in your academic journey</b>. 
+                The earlier you know your risks, the more time you have to choose the right path and succeed.
+            </p>
+            <div class="When_boxes">
+                <div class="box2">
+                    <span class="box1_words">
+                        ✔️ Before joining <b>JEE/NEET coaching</b> to see if it truly fits your goals.
+                    </span>
+                </div>
+                <div class="box2">
+                    <span class="box1_words">
+                        ✔️ After <b>Class 10</b>, when deciding whether to take the science stream.
+                    </span>
+                </div>
+                <div class="box2">
+                    <span class="box1_words">
+                        ✔️ During <b>Class 11 & 12 preparation</b> to check if you are at risk of burnout or dropout.
+                    </span>
+                </div>
+                <div class="box2">
+                    <span class="box1_words">
+                        ✔️ If you feel <b>uncertain about your interest</b> in engineering/medical careers.
+                    </span>
+                </div>
+            </div>
+            <p class="When_para">
+                Using JEET at the right time can save years of effort and guide you 
+                toward a career that matches your strengths and interests.
+            </p>
+        </section>
+        <section id="How" class="section">
+            <h2 class="How_heading">How does JEET work?</h2>
+            <div class="How_steps">
+                <div class="How_step">1️⃣ Data Preprocessing — SMOTE balancing, scaling, and pipelines</div>
+                <div class="How_step">2️⃣ Model Training — Voting Classifier (Random Forest + SVC)</div>
+                <div class="How_step">3️⃣ Explainability — SHAP values for feature importance</div>
+                <div class="How_step">4️⃣ Deployment — Streamlit app + Gemini integration</div>
+            </div>
+        </section>
+    </body>
+    <script src="CSS and JS/Landing_page.js"></script>
+</html>

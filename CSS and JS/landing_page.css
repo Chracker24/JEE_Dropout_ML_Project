@@ -1,0 +1,280 @@
+body {
+    background : black;
+    color: white;
+    padding: 5vh;
+}
+
+.main {
+    font-size : 5vh;
+    color : white;
+    display : flex;
+    justify-content : center;
+    text-align: center;
+    padding-bottom: 5px;
+    margin-bottom: 4vh;
+    border-radius: 20px;
+    border-bottom: 1px solid gray
+}
+
+.JEET_heading {
+    display : flex;
+    justify-content:center;
+    font-size :clamp(6rem, 5vw, 10rem);
+    color: orange;
+}
+
+.subline_jeet {
+    display: block; 
+    font-size: clamp(0.5rem, 3vw, 6rem);
+    white-space: nowrap;  
+    overflow : hidden;
+    border-right: 2px solid white;
+    animation: typing 5s steps(69) forwards, blink 0.7s infinite;
+    max-width: 100vw; 
+    text-wrap: break-word;
+}
+.nav { 
+    max-width: 100vw; 
+    margin: 0 auto; 
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding-left : 1vw;
+    padding-right: 5vw;
+    position: fixed;
+    top: 0px;
+    right: 0.1vw;
+    left: 1vw;
+    width:100%;
+    height: 9vh;
+    background: rgba(0, 0, 0, 0.558);
+    backdrop-filter: blur(5px);
+}
+.nav-list {
+    list-style: none;
+    display:flex;
+    align-items: center;
+    gap: 2vw;
+    font-size: 2vh;
+    margin-right: 5vw;
+}
+
+.nav-toggle {
+    display : none;
+    font-size: 3vh;
+    background : none;
+    color : white;
+}
+
+@media (max-width: 700px) {
+    .nav-list  {
+        display : none;
+    }
+    .nav-toggle {
+        display : block;
+        right: 2vw;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+.section {
+    text-align : center;
+    align-items: center;
+}
+.Link_heading, .Why_heading, .What_heading, .When_heading, .How_heading {
+    font-size : clamp(2rem, 3vw, 5rem);
+    margin-left : 2vw;
+    margin-top: 50px;
+}
+.Link_subline {
+    margin-left: 2vw;
+    font-size: clamp(1.5rem, 2.5vw, 4rem);
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.Link_para{
+    margin-left: 2vw;
+    font-size: clamp(1rem, 2vw, 3rem);
+    text-align: center;
+}
+
+.Link_button_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.JEET_button {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.JEET_button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -4px;
+  top: -1px;
+  margin: auto;
+  width: 128px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.JEET_button::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.JEET_button:hover::after {
+  filter: blur(30px);
+}
+
+.JEET_button:hover::before {
+  transform: rotate(-180deg);
+}
+
+.JEET_button:active::before {
+  scale: 0.7;
+}
+
+.Why_para, .Why_para2, .What_para, .When_para{
+    margin-left: 2vw;
+    padding: 1vh;
+    font-size: clamp(0.75rem, 2vw, 2rem);
+}
+
+.Why_boxes, .cards, .When_boxes {
+    display: flex;
+    margin-left: 2vw;
+    margin-top: 3vh;
+    gap: 2vw;
+}
+
+.box, .box2 {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 33%;
+    height: clamp(10rem, 20vh, 30rem);
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 1vh 1vw;
+    font-size: clamp(0.75rem, 2vw, 2rem);
+
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.box:hover {
+    box-shadow: 0 0 100px rgb(148, 78, 12);
+    transform: translateY (100px);
+}
+
+.box2:hover {
+    box-shadow: 0 0 100px rgb(75, 193, 197);
+    transform: translateY (100px);
+}
+
+.ML-card {
+    position: relative;
+    width: 25%;
+    height: clamp(10rem, 20vh, 30rem);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+
+.card-title {
+    position: absolute;
+    font-size: clamp(0.75rem, 2vw, 2rem);
+    z-index: 2;
+    transition: opacity 1s ease;
+    text-align: center;
+    top: 40%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+}
+
+.card-content {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+}
+
+.ML-card:hover .card-title {
+    opacity: 0;
+}
+
+.ML-card:hover .card-content {
+    opacity: 1;
+}
+
+.How_step {
+  font-size: clamp(1rem, 2vw, 2rem);
+  padding: 1rem 2rem;
+  border: 1px solid white;
+  border-radius: 15px;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+}
+
+/* Active class triggers animation */
+.How_step.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Timeline delay */
+.How_step:nth-child(1).active { transition-delay: 0.3s; }
+.How_step:nth-child(2).active { transition-delay: 0.9s; }
+.How_step:nth-child(3).active { transition-delay: 1.5s; }
+.How_step:nth-child(4).active { transition-delay: 2.1s; }
