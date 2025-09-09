@@ -89,7 +89,7 @@ streamlit run Home.py
  - used SHAP for model interpretability
 
 ## Results
- - Achieved approximately **67%** accuracy
+ - Achieved approximately **73%** accuracy
   - This is due to presence of leaky data that got removed and will be fixed in later iterations with better data
  - Nonetheless, Improved recall with data balancing
  - Important predictors : socio-economic status, peer pressure and mental health
