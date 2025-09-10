@@ -7,21 +7,22 @@
         <link rel="stylesheet" href="CSS and JS/landing_page.css"
     </head>
     <body>
+        <section id="Home"></section>
         <nav class="nav">
-            <a class="home" href="#home">Home</a>
+            <button data-target="#Home" class="nav_list-buttons">Home</button>
             <button class="nav-toggle" aria-label="Toggle Navigation" aria-expanded="false">
                 ☰
             </button>
             <ul class="nav-list">
-                <li><a href="#Link">Link to app</a></li>
-                <li><a href="#What">What</a></li>
-                <li><a href="#Why">Why</a></li>
-                <li><a href="#When">When</a></li>
-                <li><a href="#How">How</a></li>
+                <li><button data-target='#Link' class="nav_list-buttons">Link to app</button></li>
+                <li><button data-target='#What' class="nav_list-buttons">WHAT</button></li>
+                <li><button data-target='#Why' class="nav_list-buttons">WHY</button></li>
+                <li><button data-target='#When' class="nav_list-buttons">WHEN</button></li>
+                <li><button data-target='#How' class="nav_list-buttons">HOW</button></li>
             </ul>
         </nav>
 
-        <main id="home" class="main">
+        <main class="home" class="main">
             <div class="heading JEET">
                 <span class="JEET_heading">JEET</span><br> 
                 <span id="subline_jeet"></span></h1>

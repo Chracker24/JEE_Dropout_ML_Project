@@ -31,5 +31,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { threshold: 0.3 }); // trigger when 30% visible
 
     steps.forEach(step => observer.observe(step));
+
+    document.addEventListener("click", (e) => {
+        const target = e.target;
+        if (target instanceof HTMLElement && target.tagName === "BUTTON") {
+            const href = target.getAttribute('data-target');
+            if (href && href.startsWith("#")) {
+                e.preventDefault();
+                const el = document.querySelector(href);
+                if (el) {
+                    el.scrollIntoView( {
+                        behavior : "smooth",
+                        block: "start"
+                    })
+                }
+            }
+        }
+    })
 })
 

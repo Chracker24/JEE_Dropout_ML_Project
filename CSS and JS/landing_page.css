@@ -4,7 +4,7 @@ body {
     padding: 5vh;
 }
 
-.main {
+main {
     font-size : 5vh;
     color : white;
     display : flex;
@@ -49,16 +49,41 @@ body {
     height: 9vh;
     background: rgba(0, 0, 0, 0.558);
     backdrop-filter: blur(5px);
+    z-index: 10;
+}
+
+section {
+    scroll-margin-top: 9vh;
 }
 .nav-list {
     list-style: none;
     display:flex;
     align-items: center;
-    gap: 2vw;
+    gap: 4vw;
     font-size: 2vh;
     margin-right: 5vw;
 }
 
+.nav_list-buttons {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid black;
+    padding: 1vh 1vw;
+    border-radius: 1vh;
+    backdrop-filter: blur(1px);
+    z-index: 11;
+    font-size: 1.7vh;
+    transition: transform 0.4s ease, background-color 0.4s ease, border 0.4s ease;
+}
+
+.nav_list-buttons:hover {
+    background-color: rgba(255, 170, 0, 0.719);
+    color: black;
+    transform: scale(1.2);
+    border: 2px solid orange;
+    backdrop-filter: blur(1px);
+    z-index: 11;
+}
 .nav-toggle {
     display : none;
     font-size: 3vh;
@@ -188,6 +213,7 @@ body {
     margin-left: 2vw;
     margin-top: 3vh;
     gap: 2vw;
+ 
 }
 
 .box, .box2 {
@@ -226,13 +252,12 @@ body {
     border: 1px solid white;
     border-radius: 20px;
     padding: 10px;
-
 }
 
 .card-title {
     position: absolute;
     font-size: clamp(0.75rem, 2vw, 2rem);
-    z-index: 2;
+    z-index: -2;
     transition: opacity 1s ease;
     text-align: center;
     top: 40%;
